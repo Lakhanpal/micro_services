@@ -1,22 +1,22 @@
 # micro_services
 
 This example demonstrate a simple example how you can use feing client to communicate between micro service using Netflix Eureka Registry.
-there are 2 micro-service userservice and feedbackservice.
+there are 2 micro-services userservice and feedbackservice.
 
-1.) start discovery service it will start on port 8761.
+1.) start discovery service it will start on port `8761`.
 
 
 2.) Configure user-service and feedback-service to register at discovery service you have started in first point.
    you can check in application.yml of both the microservices how i pointed the service to eureka server.
    
    
-3.) start micro services. user service will start on 8001 and feedbackservice will start on 8002.
+3.) start micro services. user service will start on `8001` and feedbackservice will start on `8002`.
 
 
 4.) check http http://localhost:8761/ you will be able to see both the services listed on eureka server.
 
 
-5.) Now i have user service `/hello` api to be consumed by feedback service using @FeignClient you can check the feingClient Code in 
+5.) Now i have user service `/hello` api to be consumed by feedback service using `@FeignClient` you can check the feingClient Code in 
 feedbackService --> com.techmojo.feedback.client.UserServiceClient .
 
 
